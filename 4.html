@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+        .red
+        {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          border-radius: 5px;
+          border-style: solid;
+          border-width: 2px;
+          text-align: center;
+          font-size: xx-large;
+        }
+        .blue
+        {
+          width: 100px;
+          height: 100px;
+          background-color: blue;
+          border-radius: 5px;
+          border-style: dotted;
+          border-color: red;
+          border-width: 10px;
+          text-align: center;
+          font-size: xx-large;
+          display: inline-block;
+        }
+       </style>
+    </head>
+    <body>
+      <script>
+        
+        // var str = prompt("Строку: ")
+        // function fred(str)
+        // {
+        //   let div = '';
+        //   div += "<div class='red'>" + str +"</div>"
+        //   return div
+        // }
+        // document.body.innerHTML = fred(str)
+
+        <!------------------------------------------->
+
+        var str = prompt("Строку: ")
+        function fblue(str)
+        {
+          let div = '';
+          div += "<div class='blue'>" + str +"</div>"
+          return div
+        }
+        document.body.innerHTML = fblue(str)
+      </script>
+    </body>
+</html>
