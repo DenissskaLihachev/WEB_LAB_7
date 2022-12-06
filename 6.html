@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+    <div class="row"><p id="test"></p></div>
+    <div class="row"><p id="test2"></p></div>
+        <script>
+            function getRandomInt(min, max) { return Math.floor(Math.random() * (max - min)) + min; }
+
+            const math =
+            {
+                absolute: (x) =>
+                {
+                    return x < 0 ? -x : x
+                },
+                reverse: (x) =>
+                {
+                    return -x
+                },
+                sqrt: (x) =>
+                {
+                    return x * x
+                }
+            }
+            let arr = []
+            for (let i = 0; i < 10; i++)
+                arr[i] = getRandomInt(-50, 50)
+                
+            document.getElementById('test').innerHTML = "Массив - [" + arr + "]"
+
+            let arr_1 = []
+            let arr_2 = []
+            let arr_3 = []
+
+            for (let i = 0; i < 10; i++)
+            {
+                arr_1[i] = math.absolute(arr[i])
+                arr_2[i] = math.reverse(arr[i])
+                arr_3[i] = math.sqrt(arr[i])
+            }
+            document.getElementById('test2').innerHTML = "Число по модулю - [" + arr_1+ "]" +
+                                                         "<br>Обратный знак - [" + arr_2 + "]" +
+                                                         "<br>Квадрат числа - [" + arr_3 + "]"
+        </script>
+    </body>
+</html>

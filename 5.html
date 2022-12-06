@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <script>
+            function fgener() 
+            {
+                let count = 0
+                let mas = []
+
+                function findmas(value)
+                {
+                    if (mas.indexOf(value) === -1)
+                    {
+                        mas.push(value)
+
+                        console.log("Массив - [" + mas + "] count = [" + count + "]")
+                        alert("Строка не найдена. Добавлена новая - {" + value + "}\nМассив - [" + mas + "]\ncount = [" + count + "]")
+
+                        return false
+                    }
+                    else
+                    {
+                        count++
+
+                        console.log("Массив - [" + mas + "] count - " + count)
+                        alert("Строка была найдена - " + value + "\nМассив - [" + mas + "]\ncount = [" + count + "]")
+
+                        return true
+                    }
+                }
+                return findmas
+            }
+
+            let mas = fgener()
+            do
+            {
+                let b = prompt("Ввод: ")
+                mas(b)
+            } while (true);
+        </script>
+    </body>
+</html>

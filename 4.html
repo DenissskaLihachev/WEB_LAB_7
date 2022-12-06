@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+        .red
+        {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+          border-radius: 5px;
+          border-style: solid;
+          border-width: 2px;
+          text-align: center;
+          font-size: xx-large;
+        }
+        .blue
+        {
+          width: 100px;
+          height: 100px;
+          background-color: blue;
+          border-radius: 5px;
+          border-style: solid;
+          border-color: red;
+          border-width: 10px;
+          text-align: center;
+          font-size: xx-large;
+          display: inline-block;
+        }
+       </style>
+    </head>
+    <body>
+      <script>
+
+        let b_blue = confirm("Отобразить данные в виде синих блоков?")
+            let b_list = confirm("Отобразить данные в виде списка?")
+
+            let blue
+            let list
+
+            if (b_blue) blue = fblue
+            else blue = fred
+
+            if (b_list) list = flist
+            else list = fstr
+
+            let arr = []
+            let i = 0
+            do {
+                let b = prompt("Введите строку")
+                if (b === "")
+                    break
+                arr[i] = b
+                i++
+            } while (true);
+            if (!b_list)
+                document.body.innerHTML = blue(list(arr))
+            else
+                document.body.innerHTML = list(blue(arr))
+
+
+        
+        function fred(str)
+        {
+          let div = [];
+          div[0] += "<div class='red'>" + str +"</div>"
+          return div
+        }
+
+        function fblue(str)
+        {
+          let div = [];
+          div[0] += "<div class='blue'>" + str +"</div>"
+          return div
+        }
+
+        function fstr(arr)
+        {
+          let str = []
+          str[0] = ""
+          for (let i = 0; i < arr.length; i++)
+          {
+            str[0] += arr[i]
+          }
+          return str
+        }
+
+        function flist(arr)
+        {
+          let str = "<ul id=\"list\">"
+
+          for (let i = 0; i < arr.length; i++)
+          {
+            str += "\t<li>" + arr[i] + "</li>\n"
+          }
+          return (str + "\n</ul>")
+        }
+
+        
+
+      </script>
+    </body>
+</html>

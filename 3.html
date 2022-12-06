@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <style>
+
+    </style>
+    <body>
+        <div>
+            <ul id="list">
+            <li>Список</li>
+            </ul>
+        </div>
+
+        <script>
+            function FOO(arr)
+            {
+                let str = ""
+                for (let i = 0; i < arr.length; i++)
+                 {
+                    str += "\t<li>" + arr[i] + "</li>\n"
+                }
+                return str
+            }
+
+            let arr = []
+            let i = 0
+            do
+            {
+                let b = prompt("Введите строку")
+                if (b === "")
+                    break
+                arr[i] = b
+                i++
+            } while (true);
+             document.getElementById('list').innerHTML = FOO(arr)
+        </script>
+    </body>
+</html>

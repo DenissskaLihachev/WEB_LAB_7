@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+                function isEmpty(val)
+                {
+                    return (val === undefined || val == null || val.length <= 0) ? true : false;
+                }
+
+                (function factorial()
+                {
+                    var a = prompt("Введите число");
+    
+                    if(a == 0)
+                    {
+                        alert("Факториал вашего числа равен 0");
+                        return;
+                    }
+                    if(isNaN(a))
+                    {
+                        alert("Нужно писать число!");
+                        return;
+                    }
+                    if(isEmpty(a))
+                    {
+                        alert("Пусто!");
+                        return;
+                    }
+                    if(a < 0)
+                    {
+                        alert("Число не может быть отрицательным!");
+                        return;
+                    }
+        
+                    var nach = 1;
+                    var res = 1;
+        
+                    for(var i = 0; i < a; i++, nach++)
+                    {
+                        res *= nach;
+                    }
+        
+                    alert("Факториал вашего числа равен " + res);
+                }());
+        </script>
+    </body>
+</html>
